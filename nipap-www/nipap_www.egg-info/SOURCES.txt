@@ -124,7 +124,6 @@ nipapwww/templates/pool_form.html
 nipapwww/templates/pool_list.html
 nipapwww/templates/prefix_add.html
 nipapwww/templates/prefix_add_containers.html
-nipapwww/templates/prefix_add_from_pool.html
 nipapwww/templates/prefix_edit.html
 nipapwww/templates/prefix_form.html
 nipapwww/templates/prefix_list.html
