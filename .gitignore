@@ -4,4 +4,6 @@
 *.class
 *.tar.gz
 *.deb
+*.box
+.vagrant/
 docs/sphinx/_build/
