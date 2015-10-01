@@ -145,6 +145,7 @@ CREATE TABLE ip_net_plan (
 	display_prefix inet,
 	description text,
 	comment text,
+	ripe_description text,
 	node text,
 	pool_id integer REFERENCES ip_net_pool (id) ON UPDATE CASCADE ON DELETE SET NULL,
 	type ip_net_plan_type NOT NULL,
@@ -177,6 +178,7 @@ COMMENT ON COLUMN ip_net_plan.prefix IS '"true" IP prefix, with hosts registered
 COMMENT ON COLUMN ip_net_plan.display_prefix IS 'IP prefix with hosts having their covering assignments prefix-length';
 COMMENT ON COLUMN ip_net_plan.description IS 'Prefix description';
 COMMENT ON COLUMN ip_net_plan.comment IS 'Comment!';
+COMMENT ON COLUMN ip_net_plan.comment IS 'RIPE description';
 COMMENT ON COLUMN ip_net_plan.node IS 'Name of the node, typically the hostname or FQDN of the node (router/switch/host) on which the address is configured';
 COMMENT ON COLUMN ip_net_plan.pool_id IS 'Pool that this prefix is part of';
 COMMENT ON COLUMN ip_net_plan.type IS 'Type is one of "reservation", "assignment" or "host"';

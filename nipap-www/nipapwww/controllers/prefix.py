@@ -60,6 +60,11 @@ class PrefixController(BaseController):
             c.prefix.prefix = request.params['prefix_prefix']
             c.prefix.description = request.params['prefix_description']
 
+            if request.params['prefix_ripe_description'].strip() == '':
+                c.prefix.node = None
+            else:
+                c.prefix.node = request.params['prefix_ripe_description']
+
             if request.params['prefix_node'].strip() == '':
                 c.prefix.node = None
             else:
